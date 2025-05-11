@@ -1,0 +1,81 @@
+
+<h3>Complete the text with the correct word or phrase from the list below:</h3>
+
+<p><strong>Word Bank (12):</strong></p>
+<ul>
+  <li>hear on the grapevine</li>
+  <li>drift apart</li>
+  <li>admitted to hospital</li>
+  <li>cut corners</li>
+  <li>think the world of</li>
+  <li>sprinkler</li>
+  <li>hit the nail on the head</li>
+  <li>resorts to violence</li>
+  <li>seize opportunities</li>
+  <li>look up to</li>
+  <li>over the top</li>
+  <li>fell out with</li>
+</ul>
+
+<p><strong>Text with gaps:</strong></p>
+<p>When I moved back to my hometown after ten years away, I was surprised by how much things had changed. I still <input type="text" id="word1" class="word-gap" placeholder="Insert word here"> my childhood best friend, even though we’ve barely spoken in years. I guess that’s what happens—you just slowly <input type="text" id="word2" class="word-gap" placeholder="Insert word here">, especially when life takes you in different directions.</p>
+<p>Last week, I <input type="text" id="word3" class="word-gap" placeholder="Insert word here"> that Tom, our old neighbor, had been <input type="text" id="word4" class="word-gap" placeholder="Insert word here"> after a car accident. It was shocking because everyone used to <input type="text" id="word5" class="word-gap" placeholder="Insert word here"> him—he was kind, generous, and always helping others.</p>
+<p>My brother and I <input type="text" id="word6" class="word-gap" placeholder="Insert word here"> a few months ago, unfortunately, and haven’t really talked since. It wasn’t a big fight, but tensions had been building, and he always tries to <input type="text" id="word7" class="word-gap" placeholder="Insert word here"> when fixing things, which drives me crazy.</p>
+<p>Yesterday, our garden got completely flooded because the <input type="text" id="word8" class="word-gap" placeholder="Insert word here"> broke and wouldn’t shut off. I told my dad about it, and he said, “Well, you really <input type="text" id="word9" class="word-gap" placeholder="Insert word here">—this whole system needs replacing.”</p>
+<p>Meanwhile, our cousin Jake has changed a lot. He used to be calm, but now he often <input type="text" id="word10" class="word-gap" placeholder="Insert word here"> when he doesn’t get what he wants. He also tends to do things that are a bit <input type="text" id="word11" class="word-gap" placeholder="Insert word here">, like showing up with expensive gifts for no reason.</p>
+<p>Despite everything, I always try to <input type="text" id="word12" class="word-gap" placeholder="Insert word here"> when I can. Life doesn’t wait around, and you need to make the most of your chances.</p>
+
+<button onclick="checkAnswers()">Submit Answers</button>
+
+<p id="result"></p>
+
+<script>
+function checkAnswers() {
+  var answers = {
+    word1: 'look up to',
+    word2: 'drift apart',
+    word3: 'hear on the grapevine',
+    word4: 'admitted to hospital',
+    word5: 'think the world of',
+    word6: 'fell out with',
+    word7: 'cut corners',
+    word8: 'sprinkler',
+    word9: 'hit the nail on the head',
+    word10: 'resorts to violence',
+    word11: 'over the top',
+    word12: 'seize opportunities'
+  };
+  
+  var score = 0;
+  for (var i = 1; i <= 12; i++) {
+    var userAnswer = document.getElementById("word" + i).value.trim().toLowerCase();
+    if (userAnswer === answers["word" + i].toLowerCase()) {
+      score++;
+    }
+  }
+  
+  var resultMessage = "You got " + score + " out of 12 correct.";
+  document.getElementById("result").innerText = resultMessage;
+}
+</script>
+
+<style>
+.word-gap {
+  width: 200px;
+  margin: 5px;
+  padding: 5px;
+  font-size: 16px;
+}
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #45a049;
+}
+</style>
